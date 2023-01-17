@@ -1,0 +1,59 @@
+{
+  "name": "l-system-web-app",
+  "version": "0.1.0",
+  "description": "A simple interactive application to explore and generate fractals using L-systems",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/killian-dtn/lindenmayer-system.git"
+  },
+  "keywords": [
+    "lindenmayer",
+    "l-systems",
+    "fractal",
+    "tree",
+    "web-application",
+    "javascript",
+    "pixi.js",
+    "fractal-generator",
+    "interactive"
+  ],
+  "author": "Killian Dantan <killian.dantan.pro@gmail.com> (https://github.com/killian-dtn)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/killian-dtn/lindenmayer-system/issues"
+  },
+  "homepage": "https://github.com/killian-dtn/lindenmayer-system#readme",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
