@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/killian-dtn/lindenmayer-system.git"
+    "url": "git+https://github.com/killian-dtn/l-system-web-app.git"
   },
   "keywords": [
     "lindenmayer",
@@ -35,9 +35,9 @@
   "author": "Killian Dantan <killian.dantan.pro@gmail.com> (https://github.com/killian-dtn)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/killian-dtn/lindenmayer-system/issues"
+    "url": "https://github.com/killian-dtn/l-system-web-app/issues"
   },
-  "homepage": "https://github.com/killian-dtn/lindenmayer-system#readme",
+  "homepage": "https://github.com/killian-dtn/l-system-web-app#readme",
   "eslintConfig": {
     "extends": [
       "react-app",
