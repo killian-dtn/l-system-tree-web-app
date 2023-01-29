@@ -1,9 +1,14 @@
 .App-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
+    align-items: center;
     background-color: white;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: 60px;
+    padding: 0 10px;
+}
+
+.App-header > span {
+    margin-right: 10px;
 }
