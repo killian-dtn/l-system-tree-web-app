@@ -1,0 +1,38 @@
+.menu {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.menu-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.menu-head > button {
+    height: auto;
+    border: none;
+    background: none;
+    margin: 10px 0 10px 10px;
+    padding: 0;
+}
+
+.menu-head > div {
+    margin: 10px 0;
+}
+
+.menu-head-props {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-head-props > * {
+    width: 100%;
+}
+
+.menu-body {
+    margin-top: 10px;
+}
