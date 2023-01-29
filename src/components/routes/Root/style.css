@@ -1,0 +1,21 @@
+.menu-head-from-root {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-head-from-root button {
+    height: auto;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.menu-title {
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.menu-title > span {
+    margin-right: 10px;
+}
