@@ -1,3 +1,10 @@
+/* General menu */
+
+section.menu {
+    height: 60px;
+    transition: height .25s;
+}
+
 .menu-head-from-root {
     display: flex;
     justify-content: space-between;
@@ -20,8 +27,15 @@
     margin-right: 10px;
 }
 
-.menu-body {
+/* rendered-tree-menu */
+
+.rendered-tree-menu > .menu-body {
     display: flex;
     justify-content: center;
     height: 300px;
+}
+
+.rendered-tree-menu.menu-open {
+    height: 370px;
+    transition: height .25s;
 }

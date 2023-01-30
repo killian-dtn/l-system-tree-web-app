@@ -2,6 +2,7 @@
     background-color: #fff;
     margin-bottom: 10px;
     padding: 0 10px;
+    overflow: hidden;
 }
 
 .menu-head {

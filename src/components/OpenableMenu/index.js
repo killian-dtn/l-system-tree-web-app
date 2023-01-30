@@ -18,7 +18,7 @@ export default class OpenableMenu extends React.Component {
 
     render() {
         return (
-            <section className={"menu " + this.props.className}>
+            <section className={"menu " + this.props.className + (this.state.open ? " menu-open" : "")}>
                 <div className="menu-head">
                     <div className="menu-head-props">{this.props.head}</div>
                     {this.renderButton()}
