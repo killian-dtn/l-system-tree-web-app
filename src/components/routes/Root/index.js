@@ -2,6 +2,7 @@ import './style.css';
 
 import React from "react";
 import OpenableMenu from '../../OpenableMenu';
+import GraphicsRendering from '../../GraphicsRendering';
 
 export default class Root extends React.Component {
     renderHeads() {
@@ -32,7 +33,7 @@ export default class Root extends React.Component {
         let heads = this.renderHeads();
 
         return <>
-            <OpenableMenu head={heads["canvas"]} body={null} open={true} className="rendered-tree-menu"/>
+            <OpenableMenu head={heads["canvas"]} body={<GraphicsRendering className="rendered-tree" />} open={true} className="rendered-tree-menu"/>
             <OpenableMenu head={heads["axioms"]} body={null} className="axioms-list-menu"/>
             <OpenableMenu head={heads["rules"]} body={null} className="rules-list-menu"/>
         </>;

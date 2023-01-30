@@ -19,3 +19,9 @@
 .menu-title > span {
     margin-right: 10px;
 }
+
+.menu-body {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}

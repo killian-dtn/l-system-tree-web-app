@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "description": "A simple interactive application to explore and generate fractals using L-systems",
   "dependencies": {
+    "@pixi/math-extras": "^7.1.1",
+    "@pixi/react-pixi": "^7.0.0-alpha.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "pixi.js": "^7.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0",
