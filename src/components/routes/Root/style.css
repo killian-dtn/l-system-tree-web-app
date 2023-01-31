@@ -10,11 +10,13 @@ section.menu {
     justify-content: space-between;
 }
 
-.menu-head-from-root button {
-    height: auto;
+.menu-head-from-root > button {
+    height: 24px;
+    width: 24px;
     border: none;
     background: none;
     padding: 0;
+    font-size: 20px;
 }
 
 .menu-title {
