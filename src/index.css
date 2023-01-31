@@ -7,6 +7,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: #DFEDE6;
+  background-image: repeating-linear-gradient(
+                to bottom,
+                transparent 0 25px,
+                rgb(255 255 255 / .5) 25px 25px,
+                transparent 26px 51px
+              ), repeating-linear-gradient(
+                to right,
+                transparent 0 25px,
+                rgb(255 255 255 / .5) 25px 25px,
+                transparent 26px 51px
+              );
+  background-attachment: fixed;
 }
 
 code {
