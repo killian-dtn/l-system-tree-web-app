@@ -41,3 +41,20 @@ section.menu {
     height: 370px;
     transition: height .25s;
 }
+
+/* axioms-list-menu */
+
+.axioms-list-menu > .menu-body > ul, .axioms-list-menu > .menu-body {
+    height: 300px;
+}
+
+.axioms-list-menu > .menu-body > ul {
+    margin: 0;
+    overflow: auto;
+    
+}
+
+.axioms-list-menu.menu-open {
+    height: 370px;
+    transition: height .25s;
+}
