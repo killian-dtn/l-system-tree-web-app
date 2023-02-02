@@ -1,8 +1,7 @@
 /* General menu */
 
 section.menu {
-    height: 60px;
-    transition: height .25s;
+    min-height: 60px;
 }
 
 .menu-head-from-root {
@@ -31,30 +30,42 @@ section.menu {
 
 /* rendered-tree-menu */
 
+.rendered-tree-menu.menu-close {
+    max-height: 60px;
+    /*transition: max-height .25s;*/
+}
+
+.rendered-tree-menu.menu-open {
+    max-height: 370px;
+    /*transition: max-height .25s;*/
+}
+
 .rendered-tree-menu > .menu-body {
     display: flex;
     justify-content: center;
     height: 300px;
 }
 
-.rendered-tree-menu.menu-open {
-    height: 370px;
-    transition: height .25s;
-}
-
 /* axioms-list-menu */
 
+.axioms-list-menu.menu-close {
+    max-height: 60px;
+    /*transition: max-height .25s;*/
+}
+
+.axioms-list-menu.menu-open {
+    max-height: 370px;
+    /*transition: max-height .25s;*/
+}
+
 .axioms-list-menu > .menu-body > ul, .axioms-list-menu > .menu-body {
-    height: 300px;
+    min-height: 120px;
+    max-height: 300px;
+    height: auto;
 }
 
 .axioms-list-menu > .menu-body > ul {
     margin: 0;
     overflow: auto;
     
-}
-
-.axioms-list-menu.menu-open {
-    height: 370px;
-    transition: height .25s;
 }

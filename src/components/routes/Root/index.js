@@ -33,7 +33,7 @@ export default class Root extends React.Component {
     render() {
         let heads = this.renderHeads();
         let axioms_ph = [];
-        for (let i = 0; i < 15; i++)
+        for (let i = 0; i < 8; i++)
             axioms_ph.push({ name: "axiom-" + i, sentence: "F[-F]+F" })
 
         return <>
