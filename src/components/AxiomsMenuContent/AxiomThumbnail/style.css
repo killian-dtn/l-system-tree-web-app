@@ -1,0 +1,62 @@
+/* general */
+
+li.thumbnail-container {
+    position: relative;
+}
+
+li.thumbnail-container > canvas {
+    margin: 10px;
+}
+
+li.thumbnail-container > .thumbnail-overlay {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* overlay */
+
+li.thumbnail-container > .thumbnail-overlay > span {
+    top: 0;
+    padding: 5px;
+    position: absolute;
+}
+
+li.thumbnail-container > .thumbnail-overlay > button {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border: none;
+    background: white;
+    font-size: 20px;
+    padding: 0;
+}
+
+.thumbnail-overlay {
+    position: relative;
+}
+
+.overlay-close > .on-overlay-open {
+    display: none;
+}
+
+.overlay-open > .on-overlay-close {
+    display: none;
+}
+
+.edit-axiom-button {
+    bottom: 5px;
+    left: 5px;
+}
+
+.delete-axiom-button {
+    top: 5px;
+    right: 5px;
+}
+
+.close-overlay-button, .open-overlay-button {
+    bottom: 5px;
+    right: 5px;
+}

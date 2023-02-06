@@ -3,7 +3,7 @@ import { Point } from 'pixi.js';
 import React from 'react';
 import './style.css';
 
-export default class MiniAxiomRendered extends React.Component {
+export default class AxiomThumbnail extends React.Component {
     constructor(props) {
         super(props);
         this.state = { isOverlayOpen: false };
@@ -18,13 +18,13 @@ export default class MiniAxiomRendered extends React.Component {
         const h = (this.props.height ?? 100);
 
         return (
-            <li className={"mini-axiom-container"}>
-                <div className={"mini-axiom-overlay" + (this.state.isOverlayOpen ? " overlay-open" : " overlay-close")}>
+            <li className={"thumbnail-container"}>
+                <div className={"thumbnail-overlay" + (this.state.isOverlayOpen ? " overlay-open" : " overlay-close")}>
                     <button className={"delete-axiom-button on-overlay-open"}>🗑</button>
                     <button className={"close-overlay-button on-overlay-open"} onClick={this.updateOverlay}>❌</button>
                     <button className={"edit-axiom-button on-overlay-open"}>✏</button>
                     
-                    <span className={"mini-axiom-name on-overlay-close"}>{this.props.name}</span>
+                    <span className={"thumbnail-axiom-name on-overlay-close"}>{this.props.name}</span>
                     <button className={"open-overlay-button on-overlay-close"} onClick={this.updateOverlay}>⚙</button>
                     {/*this.state.isOverlayOpen ? <>
                         <button className={"delete-axiom-button"}>🗑</button>
