@@ -63,9 +63,3 @@ section.menu {
     max-height: 300px;
     height: auto;
 }
-
-.axioms-list-menu > .menu-body > ul {
-    margin: 0;
-    overflow: auto;
-    
-}
