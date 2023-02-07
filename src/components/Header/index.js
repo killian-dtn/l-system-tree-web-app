@@ -7,7 +7,7 @@ export default class Header extends Component {
             <header className="App-header">
                 {this.props.backButtonVisible ? <span>←</span> : null}
                 <span>GitHub Repo</span>
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/killian-dtn/l-system-web-app">↑</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/killian-dtn/l-system-tree-web-app">↑</a>
             </header>
         );
     }
