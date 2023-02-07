@@ -1,0 +1,65 @@
+/* General menu */
+
+section.menu {
+    min-height: 60px;
+}
+
+.menu-head-from-root {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-head-from-root > button {
+    height: 24px;
+    width: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.menu-title {
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.menu-title > span {
+    margin-right: 10px;
+}
+
+/* rendered-tree-menu */
+
+.rendered-tree-menu.menu-close {
+    max-height: 60px;
+    /*transition: max-height .25s;*/
+}
+
+.rendered-tree-menu.menu-open {
+    max-height: 370px;
+    /*transition: max-height .25s;*/
+}
+
+.rendered-tree-menu > .menu-body {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+
+/* axioms-list-menu */
+
+.axioms-list-menu.menu-close {
+    max-height: 60px;
+    /*transition: max-height .25s;*/
+}
+
+.axioms-list-menu.menu-open {
+    max-height: 370px;
+    /*transition: max-height .25s;*/
+}
+
+.axioms-list-menu > .menu-body > ul, .axioms-list-menu > .menu-body {
+    min-height: 120px;
+    max-height: 300px;
+    height: auto;
+}
