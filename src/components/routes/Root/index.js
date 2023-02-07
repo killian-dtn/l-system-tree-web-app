@@ -1,10 +1,20 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Navigate, useLocation } from 'react-router-dom';
 import Header from '../../Header';
 import './style.css';
 
-export default class Root extends React.Component {
+/* Ugly code */
+export default function Root() {
+    const location = useLocation();
+
+    return <ClassRoot location={location}/>;
+}
+
+class ClassRoot extends React.Component {
     render() {
+        if (this.props.location.pathname === '/')
+            return <Navigate to='/home' />;
+
         return (
             <div className="App">
                 <Header backButtonVisible={false}/>
