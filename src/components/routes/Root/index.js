@@ -4,6 +4,7 @@ import React from "react";
 import OpenableMenu from '../../OpenableMenu';
 import GraphicsRendering from '../../GraphicsRendering';
 import AxiomsMenuContent from '../../AxiomsMenuContent';
+import RulesMenuContent from '../../RulesMenuContent';
 
 export default class Root extends React.Component {
     renderHeads() {
@@ -32,14 +33,21 @@ export default class Root extends React.Component {
 
     render() {
         let heads = this.renderHeads();
+
         let axioms_ph = [];
         for (let i = 0; i < 8; i++)
-            axioms_ph.push({ name: "axiom-" + i, sentence: "F[-F]+F" })
+            axioms_ph.push({ name: "axiom-" + i, sentence: "F[-F]+F" });
+        
+        let rules_ph = [];
+        for (let i = 0; i < 8; i++)
+            rules_ph.push({ from: "Line", to: "axiom-" + i, isEnabled: false })
 
-        return <>
-            <OpenableMenu head={heads["canvas"]} body={<GraphicsRendering className="rendered-tree" />} open={true} className="rendered-tree-menu"/>
-            <OpenableMenu head={heads["axioms"]} body={<AxiomsMenuContent data={axioms_ph}/>} className="axioms-list-menu"/>
-            <OpenableMenu head={heads["rules"]} body={null} className="rules-list-menu"/>
-        </>;
+        return (
+            <>
+                <OpenableMenu head={heads["canvas"]} body={<GraphicsRendering className="rendered-tree" />} open={true} className="rendered-tree-menu"/>
+                <OpenableMenu head={heads["axioms"]} body={<AxiomsMenuContent data={axioms_ph}/>} className="axioms-list-menu"/>
+                <OpenableMenu head={heads["rules"]} body={<RulesMenuContent data={rules_ph}/>} className="rules-list-menu"/>
+            </>
+        );
     }
 }
