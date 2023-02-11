@@ -6,45 +6,22 @@ import GraphicsRendering from '../../GraphicsRendering';
 import AxiomsMenuContent from '../../AxiomsMenuContent';
 import RulesMenuContent from '../../RulesMenuContent';
 
-export default class Home extends React.Component {
-    renderHead({ icon, title }) {
+class MenuHead extends React.Component {
+    render() {
         return (
             <div className="menu-head-from-root">
                 <div className="menu-title">
-                    {icon !== null ? <span>{icon}</span> : <></>}
-                    {title !== null ? <span>{title}</span> : <></>}
+                    {this.props.icon && <span>{this.props.icon}</span>}
+                    {this.props.title && <span>{this.props.title}</span>}
                 </div>
+                {this.props.btnEvent && <button onClick={this.props.btnEvent}>+</button>}
             </div>
         );
     }
+}
 
-    renderHeads() {
-        return {
-            canvas: this.renderHead({ icon: "🌳" })/*<div className="menu-head-from-root">
-                <div className="menu-title">
-                    <span>🌳</span>
-                </div>
-            </div>*/,
-            axioms: this.renderHead({ icon: "🌿", title: "Axioms" })/*<div className="menu-head-from-root">
-                <div className="menu-title">
-                    <span>🌿</span>
-                    <span>Axioms</span>
-                </div>
-                <button>+</button>
-            </div>*/,
-            rules: this.renderHead({ icon: "📜", title: "Rules" })/*<div className="menu-head-from-root">
-                <div className="menu-title">
-                    <span>📜</span>
-                    <span>Rules</span>
-                </div>
-                <button>+</button>
-            </div>*/
-        }
-    }
-
+export default class Home extends React.Component {
     render() {
-        let heads = this.renderHeads();
-
         let axioms_ph = [];
         for (let i = 0; i < 8; i++)
             axioms_ph.push({ name: "axiom-" + i, sentence: "F[-F]+F" });
@@ -55,9 +32,17 @@ export default class Home extends React.Component {
 
         return (
             <>
-                <OpenableMenu head={heads["canvas"]} body={<GraphicsRendering className="rendered-tree" />} open={true} className="rendered-tree-menu"/>
-                <OpenableMenu head={heads["axioms"]} body={<AxiomsMenuContent data={axioms_ph}/>} className="axioms-list-menu"/>
-                <OpenableMenu head={heads["rules"]} body={<RulesMenuContent data={rules_ph}/>} className="rules-list-menu"/>
+                <OpenableMenu head={<MenuHead icon={"🌳"}/>} className="rendered-tree-menu" open={true}>
+                    <GraphicsRendering className="rendered-tree" />
+                </OpenableMenu>
+                
+                <OpenableMenu head={<MenuHead icon={"🌿"} title={"Axioms"} btnEvent={() => alert("axioms")}/>} className="axioms-list-menu">
+                    <AxiomsMenuContent data={axioms_ph}/>
+                </OpenableMenu>
+                
+                <OpenableMenu head={<MenuHead icon={"📜"} title={"Rules"} btnEvent={() => alert("rules")}/>} className="rules-list-menu">
+                    <RulesMenuContent data={rules_ph}/>
+                </OpenableMenu>
             </>
         );
     }
